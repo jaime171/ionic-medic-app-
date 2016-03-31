@@ -1,0 +1,21 @@
+/* Empty. Add your own CSS if you like */
+@font-face {
+  font-family: mainFont;
+  src: url(../fonts/Comfortaa-Bold.ttf);
+}
+@font-face {
+  font-family: secondFont;
+  src: url(../fonts/Comfortaa-Regular.ttf);
+}
+@font-face {
+  font-family: thirdFont;
+  src: url(../fonts/Comfortaa-Light.ttf);
+}
+.platform-android .bar .header-item {
+  font-size: 18px;
+  font-family: secondFont;
+}
+.bar .header-item {  /* ios */
+  font-size: 18px;
+  font-family: secondFont;
+}

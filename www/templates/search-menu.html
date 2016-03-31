@@ -1,0 +1,21 @@
+<ion-view view-title="Buscar">
+  <ion-pane>
+      <div class="bar bar-subheader item-input-inset bar-light">
+        <label class="item-input-wrapper">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="search" ng-model="search.nombre" placeholder="Buscar">
+        </label>
+      </div>
+    <ion-content class="has-subheader">
+      <ion-list>
+        <ion-item ng-repeat="item in doctorsList | filter:search:strict" class="item-thumbnail-left item-text-wrap" 
+        href="#/search-menu/{{item.id}}">
+          <img src="http://placehold.it/100x100" alt="Photo">
+          <h2>{{item.nombre | filter: query}}</h2>
+          <h3>{{item.direccion}}</h3>
+          <p>{{item.pareja}}</p>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-pane>
+</ion-view>
