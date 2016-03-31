@@ -34,10 +34,13 @@ angular.module('starter', ['ionic'])
     })
     .state('main-menu',{
       url: '/main-menu/:idCity',
-      controller: ['$scope','$stateParams','$state', function($scope,$stateParams, $state){
+      controller: ['$scope','$stateParams','$state', function($scope, $stateParams, $state){
         $scope.idCity = $stateParams.idCity;
         $scope.search = function(){
           $state.go('search-menu', {idCity: $scope.idCity})
+        }
+        $scope.directory = function(){
+          $state.go('directory-menu', {idCity: $scope.idCity})
         }
       }],
       templateUrl: 'templates/main-menu.html'
@@ -57,6 +60,10 @@ angular.module('starter', ['ionic'])
         }
       }],
       templateUrl: 'templates/search-menu.html'
+    })
+    .state('directory-menu', {
+      url: '/directory-menu/:idCity',
+      templateUrl: 'templates/directory-menu.html'
     })
     .state('detail', {
       url: '/detail/:idDoc',

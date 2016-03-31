@@ -1,12 +1,19 @@
-<ion-view view-title="Doctor Name">
+<ion-view view-title="Dr. {{ doc.nombre }}">
     <ion-content>
       <ion-list class="list-inset">
-        <ion-item class="item-test-wrap">
-          <img src="http://placehold.it/100x100" alt="Photo">
-          <h2>{{ doc.nombre }}</h2>
-          <h3>{{ doc.direccion }}</h3>
-          <p>{{ doc.pareja }}</p>
-        </ion-item>
+          <img class="center" src="img/{{doc.img}}.jpg" alt="{{item.img}}_photo">
+          <div class="button-bar button-full contact-bar">
+            <p class="espec">{{ doc.especialidad }}</p>
+            <a class="button phone" href="tel:{{ doc.telefono }}">Llamada</a>
+          </div>
+          <div class="info">
+            <p>DIRECCIÓN:<span>{{ doc.nombre }}</span></p>
+            <p>HORARIO: <span>{{ doc.horario }}</span></p>
+            <p>CONTACTO: <span>{{ doc.telefono }}</span></p>
+            <p>BIOGRAFÍA: <span>{{ doc.bio }}</span></p>
+            <p>REDES SOCIALES: <span></span></p>
+          </div>
+
       </ion-list>
     </ion-content>
 </ion-view>

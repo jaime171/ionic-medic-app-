@@ -19,3 +19,91 @@
   font-size: 18px;
   font-family: secondFont;
 }
+
+
+
+.custom-size-button {
+  height: 33vh;
+  line-height: 33vh;
+  font-size: 2em;
+  font-family: secondFont;
+  color: #387EF5 !important;
+}
+
+.custom-size-button-main {
+  height: 45vh;
+  line-height: 45vh;
+  font-size: 2em;
+  font-family: secondFont;
+  color: #387EF5 !important;
+}
+
+.footer-custom {
+  border-top: none;
+}
+.footer-custom h1 {
+  color: #999999;
+  font-family: mainFont;
+  border-top: none;
+}
+
+
+
+
+
+
+/* Helpers */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 100px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+
+
+
+
+/* Details css */
+
+
+.contact-bar {
+  font-family: thirdFont;
+}
+.espec {
+  background-color: #4D4D4D;
+  border-radius: 0 !important;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 45px;
+  font-size: 12px;
+  width: 180px;
+  text-align: center;
+  height: 47px;
+}
+
+
+.phone {
+  background-color: #246FFC;
+  border-radius: 0 !important;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 45px;
+  height: 45px;
+}
+
+
+.info {
+  padding-left: 15px;
+  padding-top: 15px;
+}
+.info p{
+  font-weight: bold;
+  text-align: left;
+}
+.info span {
+  display: block;
+  font-weight: lighter;
+}

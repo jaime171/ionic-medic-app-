@@ -2,23 +2,29 @@ angular
 	.module('starter')
 	.factory('doctoresService', ['$http', function($http) {
 		
-
 		var doctores = [
 			{
 				"id": 1,
-				"nombre": "Jaime Simental Saltillo",
-				"direccion": "Abasolo 997",
+				"nombre": "Martin Alfredo Segovia",
+        "img": "martin_alfredo",
+        "especialidad": "Medicina Interna",
+				"direccion": "Hospital La Concepción",
 				"telefono": "8444847999",
-				"pareja": "Iliana Mellado",
-				"city": "saltillo"
+				"ciudad": "saltillo",
+        "correo": "dr.alfredo.segovia@hotmail.com",
+        "bio": "18 años ejerciendo"
 			},
 			{
 				"id": 2,
-				"nombre": "Iliana Mellado Goerne",
-				"direccion": "Privada Lourdes 550",
-				"telefono": "8442048200",
-				"pareja": "Jaime Martinez",
-				"city": "saltillo"
+        "nombre": "Catalina Espino",
+        "img": "catalina_espino",
+        "especialidad": "Inmunologia Clinica",
+        "direccion": "Venustiano Carrranza 4036-22",
+        "horario": "11:00 - 13:00 y 16:30 - 20:00 hrs (cita previa)",
+        "telefono": "8444150347",
+        "ciudad": "saltillo",
+        "correo": "leticia-riverag@hotmail.com",
+        "bio": "23 años en el área e alergia , diagnsotico y tratamiento lérgica dermatitis atopica asma bronquial. urticaria,. experiencia en 22 campamentos para niños con asma bronquial y carreas para pacientes con asma bronquial."
 			},
 			{
 				"id": 3,
@@ -26,7 +32,7 @@ angular
 				"direccion": "FBR",
 				"telefono": "8448076459",
 				"pareja": "Ilse",
-				"city": "leon"
+				"ciudad": "leon"
 			},
 			{
 				"id": 4,
@@ -34,12 +40,12 @@ angular
 				"direccion": "FBR",
 				"telefono": "8448076459",
 				"pareja": "Edgar",
-				"city": "guanajuato"
+				"ciudad": "guanajuato"
 			}
 		]
 		function getDoctoresByCity(city){
 			var docs = doctores.filter(function(doc){
-				return doc.city == city;
+				return doc.ciudad == city;
 			})
 			return docs;
 		}
