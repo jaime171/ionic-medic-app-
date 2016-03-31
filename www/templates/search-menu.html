@@ -8,8 +8,7 @@
       </div>
     <ion-content class="has-subheader">
       <ion-list>
-        <ion-item ng-repeat="item in doctorsList | filter:search:strict" class="item-thumbnail-left item-text-wrap" 
-        href="#/search-menu/{{item.id}}">
+        <ion-item ng-repeat="item in doctorsList | filter:search:strict" class="item-thumbnail-left item-text-wrap" ng-click="showDoc('{{item.id}}')">
           <img src="http://placehold.it/100x100" alt="Photo">
           <h2>{{item.nombre | filter: query}}</h2>
           <h3>{{item.direccion}}</h3>

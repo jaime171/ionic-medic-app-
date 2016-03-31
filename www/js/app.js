@@ -33,20 +33,45 @@ angular.module('starter', ['ionic'])
       templateUrl: 'templates/city-menu.html'
     })
     .state('main-menu',{
-      url: '/main-menu',
-      templateUrl: 'templates/main-menu.html',
-
+      url: '/main-menu/:idCity',
+      controller: ['$scope','$stateParams','$state', function($scope,$stateParams, $state){
+        $scope.idCity = $stateParams.idCity;
+        $scope.search = function(){
+          $state.go('search-menu', {idCity: $scope.idCity})
+        }
+      }],
+      templateUrl: 'templates/main-menu.html'
     })
     .state('search-menu',{
-      url: '/search-menu',
+      url: '/search-menu/:idCity',
+      resolve: { 
+        doctores: ['$stateParams','doctoresService', function($stateParams, doctoresService){
+          var id = $stateParams.idCity;
+          return doctoresService.getDoctoresByCity(id);
+        }]
+      },
+      controller: ['$scope','doctores', '$state', function($scope, doctores, $state){
+        $scope.doctorsList = doctores;
+        $scope.showDoc = function(id){
+          $state.go('detail', {idDoc: id})
+        }
+      }],
       templateUrl: 'templates/search-menu.html'
     })
-    .state('detail',{
-      url: '/search-menu/:aId',
-      templateUrl: 'templates/detail.html',
-      controller: 'MainController'
+    .state('detail', {
+      url: '/detail/:idDoc',
+      resolve: { 
+        infoDoc: ['$stateParams','doctoresService', function($stateParams, doctoresService){
+          var id = $stateParams.idDoc;
+          return doctoresService.getDoctorById(id);
+        }]
+      },
+      controller: ['$scope','infoDoc', function($scope, infoDoc){
+        $scope.doc = infoDoc;
+      }],
+      templateUrl: 'templates/detail.html'
     })
-    $urlRouterProvider.otherwise('city-menu');
+    $urlRouterProvider.otherwise('/city-menu');
 })//Config
 
 

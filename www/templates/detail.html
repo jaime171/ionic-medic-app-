@@ -1,12 +1,11 @@
 <ion-view view-title="Doctor Name">
     <ion-content>
       <ion-list class="list-inset">
-        <ion-item class="item-test-wrap" 
-        ng-repeat="item in doctorsList | filter: { id: whichdoctor }">
+        <ion-item class="item-test-wrap">
           <img src="http://placehold.it/100x100" alt="Photo">
-          <h2>{{ item.nombre }}</h2>
-          <h3>{{ item.direccion }}</h3>
-          <p>{{ item.pareja }}</p>
+          <h2>{{ doc.nombre }}</h2>
+          <h3>{{ doc.direccion }}</h3>
+          <p>{{ doc.pareja }}</p>
         </ion-item>
       </ion-list>
     </ion-content>
