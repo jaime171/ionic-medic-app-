@@ -23,16 +23,16 @@
 
 
 .custom-size-button {
-  height: 33vh;
-  line-height: 33vh;
+  height: 210px;
+  line-height: 210px;
   font-size: 2em;
   font-family: secondFont;
   color: #387EF5 !important;
 }
 
 .custom-size-button-main {
-  height: 45vh;
-  line-height: 45vh;
+  height: 280px;
+  line-height: 280px;
   font-size: 2em;
   font-family: secondFont;
   color: #387EF5 !important;
@@ -72,6 +72,7 @@
 .contact-bar {
   font-family: thirdFont;
 }
+
 .espec {
   background-color: #4D4D4D;
   border-radius: 0 !important;
@@ -82,6 +83,7 @@
   width: 180px;
   text-align: center;
   height: 47px;
+  text-transform: capitalize;
 }
 
 
@@ -106,4 +108,53 @@
 .info span {
   display: block;
   font-weight: lighter;
+}
+
+
+
+/*Custom search styles*/
+.custom-search {
+  text-transform: capitalize;
+}
+  .custom-search h2 {
+    /*font-family:  mainFont;*/
+    font-weight:  bold; 
+  }
+  .custom-search h3 {
+    /*font-family:  mainFont;*/
+  }
+  .custom-search h3{
+
+  }
+
+.directory-btn {
+  border-radius: 0 !important;
+  line-height: 30px;
+  margin-left: 17px !important;
+  font-size: 15px;
+}
+
+.default-position {
+  margin-left: 0 !important;
+}
+
+
+
+/*custom directory icons*/
+.custom-icon {
+  width: 60px;
+  margin-top: 30px; 
+}
+
+
+
+/*Map*/
+
+.map {
+  background-color: red;
+  height: 250px;
+  width: 100;
+  position: absolute;
+  width: 100%;
+  left: 0;
 }

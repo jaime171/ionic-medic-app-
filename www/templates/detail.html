@@ -7,12 +7,17 @@
             <a class="button phone" href="tel:{{ doc.telefono }}">Llamada</a>
           </div>
           <div class="info">
-            <p>DIRECCIÓN:<span>{{ doc.nombre }}</span></p>
+            <p>DIRECCIÓN:<span>{{ doc.direccion }}</span></p>
             <p>HORARIO: <span>{{ doc.horario }}</span></p>
             <p>CONTACTO: <span>{{ doc.telefono }}</span></p>
             <p>BIOGRAFÍA: <span>{{ doc.bio }}</span></p>
             <p>REDES SOCIALES: <span></span></p>
+            <p>MAPA:</p>
+            <div class="map" id="map" data-tap-disabled="true">
+            
+            </div>
           </div>
+          
 
       </ion-list>
     </ion-content>

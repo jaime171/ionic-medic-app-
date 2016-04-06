@@ -1,4 +1,4 @@
-<ion-view view-title="Buscar">
+<ion-view view-title="Directorio">
   <ion-pane>
       <div class="bar bar-subheader item-input-inset bar-light">
         <label class="item-input-wrapper">
@@ -8,9 +8,9 @@
       </div>
     <ion-content class="has-subheader">
       <ion-list>
-        <ion-item ng-repeat="item in doctorsList | filter:search:strict" class="item-thumbnail-left item-text-wrap" ng-click="showDoc('{{item.id}}')">
+        <ion-item ng-repeat="item in doctorsList | filter:search:strict" class="item-thumbnail-left item-text-wrap custom-search" ng-click="showDoc('{{item.id}}')">
           <img src="img/{{item.img}}.jpg" alt="{{item.img}}_photo">
-          <h2>Dr. {{item.nombre | filter: query}}</h2>
+          <h2>Dr. {{item.nombre | filter: query}}</h2><br>  
           <h3>{{item.especialidad}}</h3>
           <h3>{{item.direccion}}</h3>
         </ion-item>

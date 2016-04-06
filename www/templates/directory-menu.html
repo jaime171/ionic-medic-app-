@@ -3,15 +3,22 @@
 
     <ion-content>
       <ion-list>
-        <!-- <ion-item ng-repeat="item in doctorsList | filter:search:strict" class="item-thumbnail-left item-text-wrap" ng-click="showDoc('{{item.id}}')">
-          <img src="http://placehold.it/100x100" alt="Photo">
-          <h2>{{item.nombre | filter: query}}</h2>
-          <h3>{{item.direccion}}</h3>
-          <p>{{item.pareja}}</p>
-        </ion-item> -->
-        <a href="#" class="button button-stable button-block">cardiologo</a>
-        <a href="#"  class="button button-stable button-block">dentista</a>
-        <a href="#"  class="button button-stable button-block">neurologo</a>
+        <div class="button-bar button-full contact-bar">
+          <div ng-click="search('cardiologo');" class="button button-stable button-block directory-btn default-position">
+            <img class="custom-icon" src="img/martin_alfredo.jpg" alt="icon">
+            <p>Cardiologo</p>
+          </div>
+          
+          <img src="" alt="">
+          <a ng-click="search('dentista');" class="button button-stable button-block directory-btn">Dentista</a>
+        </div>
+
+        <div class="button-bar button-full contact-bar">
+          <a ng-click="search();" class="button button-stable button-block directory-btn default-position">Neurologo</a>
+          <a ng-click="search();" class="button button-stable button-block directory-btn">neurologo</a>
+        </div>
+       
+        
       </ion-list>
     </ion-content>
   </ion-pane>
