@@ -1,18 +1,17 @@
-<ion-view view-title="Directorio">
+<ion-view view-title="Buscar">
   <ion-pane>
-      <div class="bar bar-subheader item-input-inset bar-light">
+    <ion-content >
+      <div class="bar item-input-inset bar-light">
         <label class="item-input-wrapper">
           <i class="icon ion-search placeholder-icon"></i>
           <input type="search" ng-model="search.nombre" placeholder="Buscar">
         </label>
       </div>
-    <ion-content class="has-subheader">
       <ion-list>
         <ion-item ng-repeat="item in doctorsList | filter:search:strict" class="item-thumbnail-left item-text-wrap custom-search" ng-click="showDoc('{{item.id}}')">
-          <img src="img/{{item.img}}.jpg" alt="{{item.img}}_photo">
-          <h2>Dr. {{item.nombre | filter: query}}</h2><br>  
+          <img src="img/{{item.img}}.jpg" alt="{{item.nombre}} photo">
+          <h2>Dr. {{item.nombre | filter: query}}</h2>
           <h3>{{item.especialidad}}</h3>
-          <h3>{{item.direccion}}</h3>
         </ion-item>
       </ion-list>
     </ion-content>

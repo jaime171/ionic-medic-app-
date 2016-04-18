@@ -1,21 +1,18 @@
 <ion-view view-title="Dr. {{ doc.nombre }}">
     <ion-content>
       <ion-list class="list-inset">
-          <img class="center" src="img/{{doc.img}}.jpg" alt="{{item.img}}_photo">
-          <div class="button-bar button-full contact-bar">
-            <p class="espec">{{ doc.especialidad }}</p>
-            <a class="button phone" href="tel:{{ doc.telefono }}">Llamada</a>
-          </div>
+          <img class="center" src="img/{{doc.img}}.jpg" alt="{{doc.nombre}}_photo">
+          <p class="espec">{{ doc.especialidad }}</p>     
+          <a href="tel:{{doc.emergencia}}" class="button phone button-full" target="_blank">Llamada</a>
           <div class="info">
+            <p>CONSULTORIO: <span>{{ doc.consultorio }}</span></p>
             <p>DIRECCIÓN:<span>{{ doc.direccion }}</span></p>
             <p>HORARIO: <span>{{ doc.horario }}</span></p>
             <p>CONTACTO: <span>{{ doc.telefono }}</span></p>
-            <p>BIOGRAFÍA: <span>{{ doc.bio }}</span></p>
-            <p>REDES SOCIALES: <span></span></p>
+            <p>EXPERIENCIA: <span>{{ doc.bio }}</span></p>
+            <p>REDES SOCIALES: <span><a href="{{ doc.redes }}">{{ doc.redes }}</a></span></p>
             <p>MAPA:</p>
-            <div class="map" id="map" data-tap-disabled="true">
-            
-            </div>
+            <div class="map" id="map" data-tap-disabled="true"></div>
           </div>
           
 

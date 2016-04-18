@@ -74,16 +74,14 @@
 }
 
 .espec {
-  background-color: #4D4D4D;
   border-radius: 0 !important;
-  color: white;
   letter-spacing: 1px;
-  line-height: 45px;
-  font-size: 12px;
-  width: 180px;
+  font-size: 16px;
   text-align: center;
-  height: 47px;
   text-transform: capitalize;
+  font-weight: bold;
+  margin-top: -25px;
+  margin-bottom: 62px;
 }
 
 
@@ -132,6 +130,7 @@
   line-height: 30px;
   margin-left: 17px !important;
   font-size: 15px;
+  color: #246FFC !important;
 }
 
 .default-position {
@@ -142,7 +141,7 @@
 
 /*custom directory icons*/
 .custom-icon {
-  width: 60px;
+  width: 50px;
   margin-top: 30px; 
 }
 
@@ -151,10 +150,33 @@
 /*Map*/
 
 .map {
-  background-color: red;
+  background-color: white;
   height: 250px;
   width: 100;
   position: absolute;
   width: 100%;
   left: 0;
+}
+
+
+
+
+.margin-btn {
+  margin-right: 5px !important;
+}
+
+.top-margin {
+  margin-top: -15px !important;
+}
+
+.one-btn {
+  width: 50%;
+}
+
+.button-bar > .button {
+  padding: 0;
+}
+
+.long-name {
+  font-size: .8em;
 }

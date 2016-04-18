@@ -87,10 +87,14 @@ angular.module('starter', ['ionic'])
 
     .state('directory-menu', {
       url: '/directory-menu/:idCity',
-      controller:  ['$scope', '$state', '$stateParams', function($scope, $state, $stateParams){
+      controller:  ['$scope', '$state', '$stateParams', 'doctoresService',function($scope, $state, $stateParams, doctoresService){
         $scope.search=function(idSpecialty){
           $state.go('directory-specialty', {idCity: $stateParams.idCity, idSpecialty: idSpecialty})
         }
+        var id = $stateParams.idCity;
+        doctoresService.setListDoc(doctoresService.getDoctoresByCity(id));
+        console.log(doctoresService.getDoctoresByCity(id))
+        // console.log($scope.test);
       }],
       templateUrl: 'templates/directory-menu.html'
     })
@@ -130,11 +134,6 @@ angular.module('starter', ['ionic'])
 
 
 
-
-
-
-
-
     .state('detail', {
       url: '/detail/:idDoc',
       resolve: { 
@@ -143,16 +142,14 @@ angular.module('starter', ['ionic'])
           return doctoresService.getDoctorById(id);
         }]
       },
-      controller: ['$scope','infoDoc', function($scope, infoDoc){
+      controller: ['$scope','infoDoc', '$rootScope', function($scope, infoDoc, $rootScope){
         $scope.doc = infoDoc;
-        
-
         // By Direction  
-        // 
+        
+       
+
         function initMap() {
-          
           var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 8,
             zoom: 16,
             scrollwheel: false,
             disableDefaultUI: true
@@ -163,9 +160,8 @@ angular.module('starter', ['ionic'])
           
         };
   
-
         function geocodeAddress(geocoder, resultsMap) {
-          var address = 'Blvd. Venustiano Carranza 4036, Virreyes Residencial, 25230 Saltillo, COL'
+          var address = $scope.doc.direccion;
           geocoder.geocode({'address': address}, function(results, status) {
             if (status === google.maps.GeocoderStatus.OK) {
               resultsMap.setCenter(results[0].geometry.location);
@@ -173,20 +169,20 @@ angular.module('starter', ['ionic'])
                 map: resultsMap,
                 position: results[0].geometry.location
               });
-            } else {
-              alert('Geocode was not successful for the following reason: ' + status);
-            }
+            } 
           });
         }
-           
-        initMap();
+      initMap();
+      
+      // $rootScope.$on('$cordovaNetwork:online', function(){
+       
+      // });
+      
 
-
-
-
-
-
-
+      // window.addEventListener("offline", function(e) {
+      //   initMap();
+      //   console.log("online")
+      // }, false);  
 
         
         // Geolocation

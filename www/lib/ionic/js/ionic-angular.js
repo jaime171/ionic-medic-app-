@@ -2408,7 +2408,7 @@ function($ionicLoadingConfig, $ionicBody, $ionicTemplateLoader, $ionicBackdrop, 
  * </script>
  * ```
  * ```js
- * angular.module('testApp', ['ionic'])
+ * angular.module('mediclist', ['ionic'])
  * .controller('MyController', function($scope, $ionicModal) {
  *   $ionicModal.fromTemplateUrl('my-modal.html', {
  *     scope: $scope,
@@ -3037,7 +3037,7 @@ IonicModule
  * </script>
  * ```
  * ```js
- * angular.module('testApp', ['ionic'])
+ * angular.module('mediclist', ['ionic'])
  * .controller('MyController', function($scope, $ionicPopover) {
  *
  *   // .fromTemplate() method
@@ -12221,7 +12221,7 @@ IonicModule
  * </ion-content>
  * ```
  * ```js
- * angular.module('testApp', ['ionic'])
+ * angular.module('mediclist', ['ionic'])
  * .controller('MyController', function($scope, $http) {
  *   $scope.items = [1,2,3];
  *   $scope.doRefresh = function() {
