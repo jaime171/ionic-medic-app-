@@ -172,11 +172,11 @@ angular.module('starter', ['ionic'])
             } 
           });
         }
-      initMap();
+     
       
-      // $rootScope.$on('$cordovaNetwork:online', function(){
-       
-      // });
+      $rootScope.$on('$cordovaNetwork:online', function(){
+        initMap();
+      });
       
 
       // window.addEventListener("offline", function(e) {
