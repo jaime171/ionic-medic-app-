@@ -165,19 +165,7 @@ angular.module('starter', ['ionic', 'ngCordova'])
       },
       controller: ['$scope','infoDoc', '$rootScope', '$cordovaNetwork', function($scope, infoDoc, $rootScope, $cordovaNetwork){
         $scope.doc = infoDoc;
-          document.addEventListener("deviceready", onDeviceReady, false);
-          function onDeviceReady() {
-              checkConnection();
-          }
-          function checkConnection() {
-            if(navigator.connection.type==0) {
-              // alert("Offline");
-            }
-            else if(navigator.connection.type=='none') {
-              // alert("Offline");
-            }
-            else {
-              function initMap() {
+        function initMap() {
                 var map = new google.maps.Map(document.getElementById('map'), {
                   zoom: 16,
                   scrollwheel: false,
@@ -199,8 +187,21 @@ angular.module('starter', ['ionic', 'ngCordova'])
                 });
               }
               initMap();
-              }  // else
-            } // main function
+          // document.addEventListener("deviceready", onDeviceReady, false);
+          // function onDeviceReady() {
+          //     checkConnection();
+          // }
+          // function checkConnection() {
+          //   if(navigator.connection.type==0) {
+          //     // alert("Offline");
+          //   }
+          //   else if(navigator.connection.type=='none') {
+          //     // alert("Offline");
+          //   }
+          //   else {
+              
+          //     }  // else
+          //   } // main function
       }],
       templateUrl: 'templates/detail.html'
     })

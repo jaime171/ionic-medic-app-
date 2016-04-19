@@ -10,7 +10,7 @@
       <ion-list>
         <ion-item ng-repeat="item in doctorsList | filter:search:strict" class="item-thumbnail-left item-text-wrap custom-search" ng-click="showDoc('{{item.id}}')">
           <img src="img/{{item.img}}.jpg" alt="{{item.nombre}} photo">
-          <h2>Dr. {{item.nombre | filter: query}}</h2>
+          <h2>{{item.nombre | filter: query}}</h2>
           <h3>{{item.especialidad}}</h3>
         </ion-item>
       </ion-list>

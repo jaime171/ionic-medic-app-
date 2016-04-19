@@ -78,7 +78,7 @@
   letter-spacing: 1px;
   font-size: 16px;
   text-align: center;
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
   font-weight: bold;
   margin-top: -25px;
   margin-bottom: 30px;
@@ -111,9 +111,9 @@
 
 
 /*Custom search styles*/
-.custom-search {
+/*.custom-search {
   text-transform: capitalize;
-}
+}*/
   .custom-search h2 {
     /*font-family:  mainFont;*/
     font-weight:  bold; 
@@ -181,4 +181,7 @@
   font-size: .8em;
 }
 
+.custom-line-heigh {
+  line-height: 23px
+}
 
