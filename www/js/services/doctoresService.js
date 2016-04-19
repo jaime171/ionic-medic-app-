@@ -371,7 +371,7 @@ angular
         "consultorio": "Torre Medyca – Adrián Muguerza 1115 – 202. Col. Brisas",
         "direccion": "",
         "horario": "(Previa Cita)",
-        "telefono": "4150122 (Emergencia: “8444193810”)",
+        "telefono": "4150122 (Emergencia: 8444193810)",
         "ciudad": "saltillo",
         "correo": "alecruz03@hotmail.com",
         "redes": "",
